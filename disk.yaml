@@ -1,0 +1,10 @@
+- name: Uso de disco
+  hosts: all
+
+  tasks:
+    - name: Obtener uso de disco
+      command: df -h
+      register: disco
+
+    - debug:
+        var: disco.stdout_lines
