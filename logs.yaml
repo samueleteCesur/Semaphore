@@ -1,5 +1,5 @@
 - name: Mostrar logs del sistema en AlmaLinux 9
-  hosts: all
+  hosts: NFS
   become: yes
 
   tasks:
