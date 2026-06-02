@@ -1,0 +1,12 @@
+- name: Mostrar top de la máquina BBDD
+  hosts: BBDD
+  become: yes
+
+  tasks:
+    - name: Obtener estado tipo top
+      command: top -b -n 1
+      register: salida_top
+
+    - name: Mostrar salida de top
+      debug:
+        var: salida_top.stdout_lines
