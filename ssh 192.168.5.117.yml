@@ -1,0 +1,6 @@
+- name: Abrir SSH desde el servidor Semaphore
+  hosts: localhost
+  connection: local
+  tasks:
+    - name: SSH directo
+      shell: ssh root@192.168.5.117
